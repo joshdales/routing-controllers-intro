@@ -14,7 +14,12 @@ class PagesController < ApplicationController
 
   def kitten
     requested_size = params[:size]
-    @kitten_url = "http://lorempizel.com/#{requested_size}/#{requested_size}/cats"
+    @kitten_url = "http://lorempixel.com/#{requested_size}/#{requested_size}/cats"
+  end
+
+  def kittens
+    requested_size = params[:size]
+    @kitten_url = "http://lorempixel.com/#{requested_size}/#{requested_size}/cats"
   end
 
 end
