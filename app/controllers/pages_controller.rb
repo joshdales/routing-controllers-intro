@@ -12,4 +12,8 @@ class PagesController < ApplicationController
     @header = "Welcome to the conest page!"
   end
 
+  def kitten
+
+  end
+
 end
