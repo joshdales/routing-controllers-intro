@@ -12,14 +12,17 @@ class PagesController < ApplicationController
     @header = "Welcome to the conest page!"
   end
 
-  def kitten
-    requested_size = params[:size]
+  def set_kitten_url
+    requested_size = params[:id]
     @kitten_url = "http://lorempixel.com/#{requested_size}/#{requested_size}/cats"
   end
 
+  def kitten
+    set_kitten_url
+  end
+
   def kittens
-    requested_size = params[:size]
-    @kitten_url = "http://lorempixel.com/#{requested_size}/#{requested_size}/cats"
+    set_kitten_url
   end
 
 end
